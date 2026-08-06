@@ -53,8 +53,8 @@
 }
 
 .overlay {
-  min-height: 100vh;
-  background-image: url(assets/cafebackground.avif);
+  height: 100vh;
+  background-image: url(assets/cafebackground.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -79,53 +79,62 @@
   background-color: #e1c19b;
   min-height: 100vh;
   display: flex;
-  gap: 50px;
-  justify-content: space-between;
+  justify-content: center;
   position: relative;
 }
 
-#section2 h1 {
-  text-align: center;
-  margin: 0;
-  position: relative;
-  top: 60px;
-}
-
-.timelne {
+.heading-of-2 {
   display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 100px;
 }
 
-.timelne p {
-  text-align: center;
+.left2 p {
+  font-size: 1.1rem;
+  position: absolute;
+  top: 130px;
+  left: 250px;
+}
+
+.right2 p {
+  font-size: 1.1rem;
+  position: absolute;
+  top: 130px;
+  right: 250px;
 }
 
 .line {
-  width: 900px;
+  width: 1000px;
   height: 6px;
+  border-radius: 2px;
   background-image: linear-gradient(
     to right,
-    #562424,
-    #602c2c,
-    #693534,
-    #733d3c,
-    #7d4645,
-    #8b5553,
-    #9a6562,
-    #a87571,
-    #be908c,
-    #d3aba7,
-    #e9c7c4
+    #7a3500,
+    #864417,
+    #91532a,
+    #9c633e,
+    #a77251,
+    #af7e5f,
+    #b8896d,
+    #c0957b,
+    #c9a087,
+    #d2aa92
   );
+  position: absolute;
+  top: 180px;
+
   display: flex;
   justify-content: space-between;
-
-  position: absolute;
-  top: 50px;
+  align-items: center;
 }
 
 .dot {
   width: 22px;
   height: 22px;
+  background-color: black;
+  border-radius: 50%;
+  border: 4px;
   z-index: 2;
 }
 
@@ -133,8 +142,7 @@
   display: flex;
   gap: 20px;
   position: absolute;
-  bottom: 50px;
-  left: 90px;
+  bottom: 80px;
 }
 
 .card-container {
@@ -168,11 +176,14 @@
 
 .whole3 {
   display: flex;
-  gap: 10px;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  padding-top: 120px;
 }
 
 .drinks-main-card {
-  width: 300px;
+  width: 350px;
   height: 500px;
   background-color: white;
   border-radius: 16px;
@@ -180,31 +191,34 @@
 
 .drinks-main-card img {
   width: 100%;
-  border-radius: 16px 16px 0 0;
-}
-
-.drinks-content {
-  padding: 20px;
-}
-
-.drinks-card {
-  width: 250px;
-  height: 300px;
-  background-color: white;
-  border-radius: 16px;
-}
-
-.drinks-card img {
-  width: 100%;
-  height: 150px;
+  height: 330px;
   object-fit: cover;
   border-radius: 16px 16px 0 0;
 }
 
-.right-card {
+.drinks-content {
+  padding: 16px;
+}
+
+.drinks-card {
+  width: 400px;
+  height: 230px;
+  background-color: white;
+  border-radius: 16px;
   display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
+}
+
+.drinks-card img {
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px 0 0 16px;
+}
+
+.right-card {
+  display: grid;
+  grid-template-columns: 400px 400px;
+  grid-template-rows: 230px 230px;
+  gap: 30px;
 }
 
 button {
@@ -214,10 +228,18 @@ button {
   border-radius: 16px;
   padding: 10px;
   color: white;
+  cursor: pointer;
 }
 
 #section4 {
-  background-color: #7a3500;
+  background-image: linear-gradient(
+    to bottom,
+    #7a3500,
+    #762f0e,
+    #712a18,
+    #6a2720,
+    #612525
+  );
   min-height: 100vh;
   color: white;
   position: relative;
@@ -252,12 +274,9 @@ button {
 #section5 {
   background-color: #fff7e8;
   min-height: 100vh;
-}
-
-#section5 h1 {
-  position: relative;
-  top: 90px;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .whole5 {
@@ -265,12 +284,23 @@ button {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 60px;
+  gap: 80px;
   padding: 80px;
+}
+
+.whole5 h1 {
+  font-family: "cafe", sans-serif, serif;
+  margin-bottom: 10px;
 }
 
 .contact {
   flex: 1;
+}
+
+.contact p {
+  border-bottom: 2px solid #5e5551;
+  padding: 20px;
+  font-size: 1.1rem;
 }
 
 .form {
@@ -281,13 +311,21 @@ button {
   box-shadow: 0 8px 20px gray;
 }
 
-.row {
+.now {
+  color: #aa3515;
+}
+
+.name-email {
+  margin-bottom: 10px;
   display: flex;
   gap: 20px;
 }
 
-.row input {
+.name-email input {
   flex: 1;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
 }
 
 .input,
@@ -297,7 +335,7 @@ textarea {
   border: 1px solid #ccc;
   border-radius: 10px;
   font-size: 16px;
-  box-sizing: border-box;
+  margin-bottom: 10px;
 }
 
 textarea {
@@ -305,16 +343,15 @@ textarea {
   resize: none;
 }
 
-button {
+.send {
   width: 100%;
   padding: 15px;
   border: none;
   border-radius: 50px;
   background-color: #3b120d;
   color: white;
-  font-size: 18px;
+  font-size: 15px;
   cursor: pointer;
-  transform: 0.3s;
 }
 
 button:hover {
