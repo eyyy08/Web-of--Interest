@@ -3,6 +3,11 @@
   src: url(assets/Holidays\ Homework.ttf);
 }
 
+@font-face {
+  font-family: "blankspace";
+  src: url(assets/KGBlankSpaceSolid.ttf);
+}
+
 * {
   margin: 0;
   box-sizing: border-box;
@@ -45,6 +50,8 @@
   color: white;
   border-radius: 8px;
   padding: 0 10px;
+  font-size: 1.1rem;
+  font-family: "blankspace", sans-serif, serif;
 }
 
 .fixed-header a:active {
@@ -67,20 +74,67 @@
 }
 
 .content {
-  color: white;
-  background-color: rgba(0, 0, 0, 0.6);
-  padding: 10px 20px;
-  width: 700px;
+  font-size: 1.6rem;
+  width: 550px;
+  text-align: end;
+  position: relative;
+  left: 100px;
+}
+
+.content h1 {
+  font-family: "cafe", sans-serif, serif;
+  margin: 0;
+  color: #b24d40;
+}
+
+.content h2 {
+  font-family: "cafe", sans-serif, serif;
+  margin: 0;
+  color: black;
+}
+
+.content p {
+  font-family: "blankspace", sans-serif, serif;
+  margin: 10px 0;
+  color: black;
+}
+
+.explore {
+  background-color: #b24d40;
+  padding: 10px 40px;
+  border: none;
   border-radius: 16px;
-  text-align: center;
+  cursor: pointer;
+}
+
+.explore:hover {
+  background-color: #7a3500;
+}
+
+.explore a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.02rem;
+  font-family: "blankspace", sans-serif, serif;
 }
 
 #section2 {
-  background-color: #e1c19b;
+  background-image: linear-gradient(
+    to bottom,
+    #f0d3be,
+    #e7c9b2,
+    #debea6,
+    #d5b49b,
+    #ccaa8f
+  );
   min-height: 100vh;
   display: flex;
   justify-content: center;
   position: relative;
+}
+
+.types {
+  color: #c08521;
 }
 
 .heading-of-2 {
@@ -88,20 +142,23 @@
   justify-content: center;
   position: absolute;
   top: 100px;
+  font-family: "cafe", sans-serif, serif;
 }
 
 .left2 p {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   position: absolute;
-  top: 130px;
+  top: 120px;
   left: 250px;
+  font-family: "blankspace", sans-serif, serif;
 }
 
 .right2 p {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   position: absolute;
-  top: 130px;
+  top: 120px;
   right: 250px;
+  font-family: "blankspace", sans-serif, serif;
 }
 
 .line {
@@ -147,9 +204,16 @@
 
 .card-container {
   width: 300px;
-  height: 380px;
+  height: 390px;
   background-color: white;
   border-radius: 16px;
+  font-size: 1.15rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.card-container:hover {
+  transform: translateY(-15px);
 }
 
 .card-container img {
@@ -161,17 +225,47 @@
 
 .card-content {
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.card-content ul {
+  padding-left: 20px;
+  font-family: "blankspace", sans-serif, serif;
+  font-size: 0.9rem;
+}
+
+.card-content h4 {
+  text-align: center;
+  padding-bottom: 10px;
+  font-family: "cafe", sans-serif, serif;
 }
 
 #section3 {
-  background-color: #805b2f;
+  background-image: linear-gradient(
+    to right top,
+    #c49163,
+    #cc9872,
+    #d4a082,
+    #daa891,
+    #d6a691,
+    #d3a392,
+    #cfa192,
+    #c29384,
+    #b68676,
+    #a97868,
+    #9d6b5b
+  );
   min-height: 100vh;
 }
 
 #section3 h1 {
+  color: #fff;
   text-align: center;
   position: relative;
   top: 90px;
+  font-family: "cafe", sans-serif, serif;
 }
 
 .whole3 {
@@ -179,14 +273,15 @@
   gap: 20px;
   justify-content: center;
   align-items: center;
-  padding-top: 120px;
+  padding-top: 90px;
 }
 
 .drinks-main-card {
   width: 350px;
-  height: 500px;
+  height: 520px;
   background-color: white;
   border-radius: 16px;
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.5);
 }
 
 .drinks-main-card img {
@@ -196,16 +291,14 @@
   border-radius: 16px 16px 0 0;
 }
 
-.drinks-content {
-  padding: 16px;
-}
-
 .drinks-card {
   width: 400px;
-  height: 230px;
+  height: 240px;
   background-color: white;
   border-radius: 16px;
   display: flex;
+  align-items: center;
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.5);
 }
 
 .drinks-card img {
@@ -214,14 +307,24 @@
   border-radius: 16px 0 0 16px;
 }
 
-.right-card {
-  display: grid;
-  grid-template-columns: 400px 400px;
-  grid-template-rows: 230px 230px;
-  gap: 30px;
+.drinks-content {
+  padding: 16px;
+  font-family: "blankspace", sans-serif, serif;
+  font-size: 0.75rem;
+  text-spacing-trim: 2px;
 }
 
-button {
+.drinks-content h3 {
+  padding: 5px;
+  font-family: "blankspace", sans-serif, serif;
+  font-size: 1.1rem;
+}
+
+.drinks-content p {
+  padding: 5px;
+}
+
+.drinks-content button {
   background-color: #341100;
   width: 100%;
   border: none;
@@ -229,6 +332,24 @@ button {
   padding: 10px;
   color: white;
   cursor: pointer;
+}
+
+.drinks-content button:hover {
+  transform: scale(1.05);
+}
+
+.price {
+  color: #e58d2a;
+  font-size: 1.2rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.right-card {
+  display: grid;
+  grid-template-columns: 400px 400px;
+  grid-template-rows: 230px 230px;
+  gap: 30px;
 }
 
 #section4 {
@@ -249,6 +370,7 @@ button {
   position: relative;
   top: 90px;
   text-align: center;
+  font-family: "cafe", sans-serif, serif;
 }
 
 .photo {
@@ -300,7 +422,7 @@ button {
 .contact p {
   border-bottom: 2px solid #5e5551;
   padding: 20px;
-  font-size: 1.1rem;
+  font-family: "blankspace", sans-serif, serif;
 }
 
 .form {
@@ -312,7 +434,7 @@ button {
 }
 
 .now {
-  color: #aa3515;
+  color: red;
 }
 
 .name-email {
@@ -354,7 +476,7 @@ textarea {
   cursor: pointer;
 }
 
-button:hover {
+.send:hover {
   background-color: #5a231c;
 }
 
