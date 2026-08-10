@@ -636,6 +636,7 @@ footer {
 
   #section3 {
     padding: 60px 20px;
+    scroll-margin-top: 30px;
   }
 
   #section3 h1 {
@@ -707,6 +708,7 @@ footer {
   #section4 {
     min-height: auto;
     padding: 60px 20px;
+    scroll-margin-top: 50px;
   }
 
   #section4 h1 {
@@ -737,6 +739,7 @@ footer {
   #section5 {
     min-height: auto;
     padding: 60px 0;
+    scroll-margin-top: 50px;
   }
 
   .whole5 {
