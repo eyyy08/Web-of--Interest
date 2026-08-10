@@ -14,6 +14,8 @@
   scroll-behavior: smooth;
 }
 
+/* ----------header---------- */
+
 .fixed-header {
   background-color: #341100;
   width: 100%;
@@ -59,8 +61,9 @@
   color: #341100;
 }
 
+/* ----------section1---------- */
+
 .overlay {
-  height: 100vh;
   background-image: url(assets/cafebackground.jpg);
   background-size: cover;
   background-position: center;
@@ -117,6 +120,8 @@
   font-size: 1.02rem;
   font-family: "blankspace", sans-serif, serif;
 }
+
+/* ----------section2---------- */
 
 #section2 {
   background-image: linear-gradient(
@@ -242,6 +247,8 @@
   font-family: "cafe", sans-serif, serif;
 }
 
+/* ----------section3---------- */
+
 #section3 {
   background-image: linear-gradient(
     to right top,
@@ -324,6 +331,10 @@
   padding: 5px;
 }
 
+.drinks-content i {
+  color: gold;
+}
+
 .drinks-content button {
   background-color: #341100;
   width: 100%;
@@ -351,6 +362,8 @@
   grid-template-rows: 230px 230px;
   gap: 30px;
 }
+
+/* ----------section4---------- */
 
 #section4 {
   background-image: linear-gradient(
@@ -392,6 +405,8 @@
 #section4 img:hover {
   transform: scale(1.1);
 }
+
+/* ----------section5---------- */
 
 #section5 {
   background-color: #fff7e8;
@@ -480,10 +495,283 @@ textarea {
   background-color: #5a231c;
 }
 
+/* ----------footer---------- */
+
 footer {
   background-color: #341100;
   color: white;
   width: 100%;
   padding: 20px;
   text-align: center;
+}
+
+/* ----------responsive-768px---------- */
+
+@media screen and (max-width: 768px) {
+  /* ----------header---------- */
+
+  .fixed-header {
+    padding: 8px 10px;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .logo h1 {
+    font-size: 1.3rem;
+    margin: 0;
+  }
+
+  .fixed-header ul {
+    padding: 0;
+    margin: 5px 0;
+    gap: 3px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .fixed-header a {
+    font-size: 0.7rem;
+    padding: 3px 5px;
+  }
+
+  /* ----------section1---------- */
+
+  .overlay {
+    min-height: 100vh;
+    padding: 20px;
+  }
+
+  .content {
+    width: 100%;
+    left: 20px;
+    text-align: center;
+    font-size: 1.1rem;
+  }
+
+  .content h1 {
+    font-size: 2.2rem;
+  }
+
+  .content h2 {
+    font-size: 1.5rem;
+  }
+
+  .content p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  .explore {
+    padding: 10px 25px;
+  }
+
+  /* ----------section2---------- */
+
+  #section2 {
+    min-height: auto;
+    padding: 120px 20px 60px;
+    display: block;
+  }
+
+  .heading-of-2 {
+    position: relative;
+    top: auto;
+    width: 100%;
+    text-align: center;
+  }
+
+  .heading-of-2 h1 {
+    font-size: 1.6rem;
+  }
+
+  .left2 p,
+  .right2 p {
+    display: none;
+  }
+
+  .line {
+    display: none;
+  }
+
+  .card {
+    position: relative;
+    bottom: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    margin-top: 30px;
+  }
+
+  .card-container {
+    width: 90%;
+    max-width: 350px;
+    height: auto;
+    min-height: 390px;
+  }
+
+  .card-container img {
+    height: 200px;
+  }
+
+  .card-content {
+    padding: 20px;
+  }
+
+  .card-content ul {
+    font-size: 0.9rem;
+  }
+
+  /* ----------section3---------- */
+
+  #section3 {
+    padding: 60px 20px;
+  }
+
+  #section3 h1 {
+    position: relative;
+    top: auto;
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+
+  .whole3 {
+    flex-direction: column;
+    gap: 30px;
+    padding: 0;
+  }
+
+  .left-card {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .drinks-main-card {
+    width: 90%;
+    max-width: 350px;
+    height: auto;
+  }
+
+  .drinks-main-card img {
+    height: 280px;
+  }
+
+  .right-card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .drinks-card {
+    width: 90%;
+    max-width: 400px;
+    height: 220px;
+  }
+
+  .drinks-card img {
+    width: 45%;
+  }
+
+  .drinks-content {
+    padding: 15px;
+    font-size: 0.75rem;
+  }
+
+  .drinks-content h3 {
+    font-size: 1rem;
+  }
+
+  .drinks-content button {
+    padding: 8px;
+  }
+
+  /* ----------section4---------- */
+
+  #section4 {
+    min-height: auto;
+    padding: 60px 20px;
+  }
+
+  #section4 h1 {
+    position: relative;
+    top: auto;
+    margin-bottom: 30px;
+    font-size: 2rem;
+  }
+
+  .photo {
+    position: relative;
+    bottom: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    padding: 0;
+  }
+
+  #section4 img {
+    width: 100%;
+    height: 180px;
+    border: 5px solid white;
+    object-fit: cover;
+  }
+
+  /* ----------section5---------- */
+
+  #section5 {
+    min-height: auto;
+    padding: 60px 0;
+  }
+
+  .whole5 {
+    width: 90%;
+    padding: 0;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .contact,
+  .form {
+    width: 100%;
+  }
+
+  .contact h1 {
+    text-align: center;
+  }
+
+  .contact p {
+    padding: 15px 5px;
+    font-size: 0.9rem;
+  }
+
+  .form {
+    padding: 25px;
+  }
+
+  .form h1 {
+    font-size: 1.5rem;
+  }
+
+  .name-email {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .name-email input {
+    width: 100%;
+  }
+
+  textarea {
+    height: 150px;
+  }
+
+  /* ----------footer---------- */
+
+  footer {
+    font-size: 0.8rem;
+    padding: 15px;
+  }
 }
